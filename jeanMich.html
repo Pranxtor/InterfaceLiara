@@ -1,50 +1,86 @@
  <!DOCTYPE html>
 <html>
-<HEAD>
-<TITLE> LIARA | Interface de recueil de données </TITLE>
-</HEAD>
+<head>
+	<TITLE> LIARA | Interface de recueil de données </TITLE>
+	<meta charset="UTF-8">
+</head>
 <body>
 
 <h1> Salut! Bienvenue sur l'interface de recueil des données du LIARA </h1>
 <h2> Laboratoire d'Intelligence Ambiante pour la Reconnaissance d'Activités </h2>
 
+
 <div class="datasource"> 
- 
+
 <p>Sélectionner la source de données que vous désirez (WebSocket)</p>
 
-<input type="checkbox" id="myCheck"> Énergétique
-<input type="checkbox" id="myCheck"> Capteurs
-<input type="checkbox" id="myCheck"> Puces RFID
-<input type="checkbox" id="myCheck" onclick="myFunction()"> Tout sélectionner
+<input type="checkbox" id="1" class="Source"> Electrique (124. ...)
+<input type="checkbox" id="2" class="Source"> Capteurs
+<input type="checkbox" id="myCheck" class="Source"> Puces RFID
+<input type="checkbox" id="CocherSource" onclick="CocherSource()"> Tout sélectionner
 <input type="button" value="Ajouter une source de données" onClick="ajouterDS()">
  
 </div>
- 	
+
+
 <div class="datasource">
 
-<p>Sélectionner le type de fichier que vous souhaitez</p>
+<p>Sélectionner le type de fichier que vous souhaiter</p>
 
-<input type="checkbox" id="myCheck"> JSON
-<input type="checkbox" id="myCheck"> CSV
-<input type="checkbox" id="myCheck" onclick="myFunction()">	Tout sélectionner
-  
+<input type="checkbox" id="myCheck"  class="Type"> JSON
+<input type="checkbox" id="myCheck"  class="Type"> CSV
+<input type="checkbox" id="CocherType"   onclick="CocherType()">	Tout sélectionner
+
 </div>
- 
-<div class="activityname">
 
+<div class="activityname">
 <p>Entrez le nom de l'activité simulée</p>
 <input type="textbox" id="myCheck">
- 
 </div>
-		
+
 <div class="accept">
 
 <p>Acquisition des données</p>
 
 <input type="button" id="myButton" value="Démarrer" onclick="myFunction()">
 <input type="button" id="myButton" value="Arrêter" onclick="myFunction()">
- 
+
 </div>
+
+<script LANGUAGE = "JAVASCRIPT"> 
+	function CocherSource() { 
+		var test=document.getElementsByClassName("Source");
+		
+		if(document.getElementById(3).checked){
+			for(var i=0;i<test.length;i++){
+			console.log(test[i].id);
+			test[i].checked=true;
+			}
+		}
+		else{
+			for(var i=0;i<test.length;i++){
+			console.log(test[i].id);
+			test[i].checked=false;
+			}
+		}
+	}
+	function CocherType() { 
+		var test=document.getElementsByClassName("Type");
+		console.log("ok");
+		if(document.getElementById(6).checked){
+			for(var i=0;i<test.length;i++){
+			console.log(test[i].id);
+			test[i].checked=true;
+			}
+		}
+		else{
+			for(var i=0;i<test.length;i++){
+			console.log(test[i].id);
+			test[i].checked=false;
+			}
+		}
+	}
+</script>
 
 </body>
 </html> 
