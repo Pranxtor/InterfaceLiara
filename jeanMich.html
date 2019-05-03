@@ -2,28 +2,45 @@
 <html>
 <body>
 
-<h1></h1>
+<h1> Salut! Bienvenue sur l'interface de recueil des données du LIARA </h1>
 
+<div class="datasource"> 
+ 
 <p>Sélectionner la source de données que vous désirez (WebSocket)</p>
 
 <input type="checkbox" id="myCheck"> Énergétique
 <input type="checkbox" id="myCheck"> Capteurs
 <input type="checkbox" id="myCheck"> Puces RFID
 <input type="checkbox" id="myCheck" onclick="myFunction()"> Tout sélectionner
+<input type="button" value="Ajouter une source de données" onClick="ajouterDS()">
+ 
+</div>
+ 	
+<div class="datasource">
 
-<p>Sélectionner la source de données que vous désirez (WebSocket)</p>
+<p>Sélectionner le type de fichier que vous souhaitez</p>
 
 <input type="checkbox" id="myCheck"> JSON
 <input type="checkbox" id="myCheck"> CSV
 <input type="checkbox" id="myCheck" onclick="myFunction()">	Tout sélectionner
+  
+</div>
+ 
+<div class="activityname">
 
 <p>Entrez le nom de l'activité simulée</p>
 <input type="textbox" id="myCheck">
+ 
+</div>
+		
+<div class="accept">
 
 <p>Acquisition des données</p>
 
 <input type="button" id="myButton" value="Démarrer" onclick="myFunction()">
 <input type="button" id="myButton" value="Arrêter" onclick="myFunction()">
+ 
+</div>
 
 </body>
 </html> 
