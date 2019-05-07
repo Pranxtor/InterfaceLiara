@@ -45,6 +45,7 @@ function ajouterDS() {
 
 	var uri = prompt("Veuillez rentrer l'URI de la nouvelle source de données en format @IP:PORT. Ne pas oublier de rajouter le ws:// avant l'adresse", "ws://");
 	while (!myRegex.test(uri)) {
+		if (uri == null) break;
 		uri = prompt("Veuillez rentrer l'URI de la nouvelle source de données en format @IP:PORT. Ne pas oublier de rajouter le ws:// avant l'adresse", "ws://");
 	}
 
@@ -57,6 +58,8 @@ function ajouterDS() {
 	var text = document.createTextNode(nomDS);
 	xlabel.setAttribute("for", x.id);
 	xlabel.appendChild(text);
-	toadd.append(x);
-	toadd.append(xlabel);
+	if (uri != null) {
+		toadd.append(x);
+		toadd.append(xlabel);
+	}
 }
