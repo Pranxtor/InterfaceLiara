@@ -64,26 +64,31 @@ function ajouterDS() {
 	}
 }
 
+disableButton(document.getElementById("myStopBtn").id);
+
 function disableButton(idBtn){
-	var btn = document.getElementById("idBtn");
+	var btn = document.getElementById(idBtn);
 	btn.setAttribute("disabled", "disabled");
 }
 
 function enableButton(idBtn){
-	var btn = document.getElementById("idBtn");
+	var btn = document.getElementById(idBtn);
 	btn.removeAttribute("disabled");
 }
 
-disableButton("myStopButton");
-
 function clickStart(){
-	var btn = document.getElementById("myStartBtn");
-	disableButton("myStartBtn");
-	enableButton("myStopBtn");
+	var start = document.getElementById("myStartBtn");
+	var stop = document.getElementById("myStopBtn");
+
+	disableButton(start.id);
+	enableButton(stop.id);
 }
 
 function clickStop(){
-	var btn = document.getElementById("myStopBtn");
-	disableButton("myStopBtn");
-	enableButton("myStartBtn");
+	var start = document.getElementById("myStartBtn");
+	var stop = document.getElementById("myStopBtn");
+
+
+	disableButton(stop.id);
+	enableButton(start.id);
 }
