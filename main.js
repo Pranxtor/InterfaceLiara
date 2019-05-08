@@ -52,7 +52,7 @@ function ajouterDS() {
 	var x = document.createElement("INPUT");
 	x.setAttribute("type", "checkbox");
 	x.setAttribute("class", "Source");
-	x.setAttribute("id", test.length + 1);
+	x.setAttribute("id", nomDS);
 	x.setAttribute("value", uri);
 	var xlabel = document.createElement("LABEL");
 	var text = document.createTextNode(nomDS);
@@ -62,4 +62,28 @@ function ajouterDS() {
 		toadd.append(x);
 		toadd.append(xlabel);
 	}
+}
+
+function disableButton(idBtn){
+	var btn = document.getElementById("idBtn");
+	btn.setAttribute("disabled", "disabled");
+}
+
+function enableButton(idBtn){
+	var btn = document.getElementById("idBtn");
+	btn.removeAttribute("disabled");
+}
+
+disableButton("myStopButton");
+
+function clickStart(){
+	var btn = document.getElementById("myStartBtn");
+	disableButton("myStartBtn");
+	enableButton("myStopBtn");
+}
+
+function clickStop(){
+	var btn = document.getElementById("myStopBtn");
+	disableButton("myStopBtn");
+	enableButton("myStartBtn");
 }
