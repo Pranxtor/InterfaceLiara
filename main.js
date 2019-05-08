@@ -80,6 +80,8 @@ function clickStart(){
 	var start = document.getElementById("myStartBtn");
 	var stop = document.getElementById("myStopBtn");
 
+	console.log("Clic sur start")
+
 	disableButton(start.id);
 	enableButton(stop.id);
 }
@@ -88,6 +90,7 @@ function clickStop(){
 	var start = document.getElementById("myStartBtn");
 	var stop = document.getElementById("myStopBtn");
 
+	console.log("Clic sur stop");
 
 	disableButton(stop.id);
 	enableButton(start.id);
