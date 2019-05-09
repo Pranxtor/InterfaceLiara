@@ -61,6 +61,82 @@ input {
 	margin-left: 5%;
 }
 
+input.delete{
+	font-size: 18px;
+	background: rgb(159, 191, 223);
+	color: black;
+	border-radius: 30px;
+	display: inline-block;
+	width: 30px;
+	height : 30px;
+	margin-left: 10px;
+}
+
+.btn{
+	position : relative;
+	top : 20px;
+}
+
+.datasource{
+	margin-bottom : 5%;
+}
+
+
+
+@media screen and (max-width: 1340px){
+	input[type=button] {
+		font-size: 18px;
+		background: rgb(159, 191, 223);
+		color: black;
+		border-radius: 15px;
+		display: inline-block;
+		width: auto;
+		margin-top: 10px;
+		align-self: center;
+	}
+
+	body{
+		width : 80%;
+		margin-left : 10%;
+	}
+
+	.plusbas2{
+		position : relative;
+		top : 28px;
+		right : 30.5%;
+		margin-left : -1%;
+	}
+
+	.datasource{
+		margin-bottom : 15%;
+	}
+
+	input.btn, input.btn2{
+		width : 90%;
+		margin-left : 5%;
+	}
+
+	input.btn{
+		margin-top : 7%;
+	}
+
+	.accept{
+		margin : 0%;
+	}
+
+	label{
+		display : inline;
+	}
+
+	.activityname{
+		margin-top : 10%;
+	}
+	
+}
+
+
+
+
 .accept {
 	text-align: center;
 }
